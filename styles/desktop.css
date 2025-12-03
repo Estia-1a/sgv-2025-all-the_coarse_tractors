@@ -2,6 +2,33 @@ header {
   position: sticky;
   top: 0;
   z-index: 100;
-  background: linear-gradient(to bottom, rgba(155,155, 250, 1), rgba(155,155, 250, 1));
+  background: linear-gradient(to bottom, rgb(35, 35, 245), rgba(35, 35, 245, 1));
   backdrop-filter: blur(6px);
+  font-family: Arial, Helvetica, sans-serif}
+
+.nav-bar {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+    font-size: 2rem;
+    font-weight: 900;
+    letter-spacing: 2px;
+    color: white;
+    text-transform:uppercase; 
+}
+
+.nav-links{
+    display: flex;
+    gap: 3rem;
+    font-size: 1rem;
+}
+
+.nav-links a{
+    opacity: 1;
 }
