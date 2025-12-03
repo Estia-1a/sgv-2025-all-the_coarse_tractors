@@ -93,3 +93,11 @@ a {
     font-size: clamp(2.5rem,4vw,33.2rem);
     margin-bottom: 1rem;
 }
+
+.tag {
+  font-size: 0.8rem;
+  background-color: dimgrey;
+  border-radius: 999px;
+  padding: 0.25rem 0.75rem;
+  border: 1px solid dimgrey;
+}
