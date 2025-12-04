@@ -101,3 +101,22 @@ a {
   padding: 0.25rem 0.75rem;
   border: 1px solid dimgrey;
 }
+
+.hero {
+  position: relative;
+  min-height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem 1.5rem 3rem;
+  background: radial-gradient(circle at top, #202020, #000 55%);
+}
+
+.hero-content {
+  max-width: 1200px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: minmax(0, 2.2fr) minmax(0, 1.2fr);
+  gap: 2.5rem;
+  align-items: center;
+}
