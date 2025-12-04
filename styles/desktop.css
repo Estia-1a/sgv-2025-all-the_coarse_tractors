@@ -120,3 +120,35 @@ a {
   gap: 2.5rem;
   align-items: center;
 }
+
+.hero-text h1 {
+  font-size: clamp(2.3rem, 4vw, 3.2rem);
+  margin-bottom: 1rem;
+}
+
+/*Couleur texte slogan*/
+.hero-text h1 span {
+  color: rgba(35, 35, 245, 1);
+}
+
+.hero-text p {
+  font-size: 1rem;
+  max-width: 32rem;
+  opacity: 0.9;
+  margin-bottom: 1.5rem;
+}
+
+.hero-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+/*Style Tags*/
+.tag {
+  font-size: 0.8rem;
+  background-color: rgba(255,255,255,0.05);
+  border-radius: 999px;
+  padding: 0.25rem 0.75rem;
+  border: 1px solid rgba(255,255,255,0.12);
+}
