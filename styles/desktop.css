@@ -189,3 +189,12 @@ a {
 .hero-card li {
   margin-bottom: 0.35rem;
 }
+
+.hero-card li::before {
+  content: "• ";
+  color: rgba(35, 35, 245, 1);
+}
+
+.hero-card .btn {
+  width: 100%;
+}
