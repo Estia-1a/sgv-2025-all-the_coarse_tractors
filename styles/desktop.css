@@ -314,7 +314,9 @@ body.scrolled header {
 }
 
 /* Carousel fluide/moderne*/
-
+.carousel {
+  scroll-behavior: smooth;
+}
 .carousel {
   display: flex;
   gap: 1.2rem;
