@@ -410,3 +410,185 @@ body.scrolled header {
   backdrop-filter: blur(4px);
   box-shadow: 0 0 8px rgba(80,160,255,0.4);
 }
+
+/* Carrousel moderne */
+.physical-grid,
+.physical-carousel {
+  display: flex;
+  gap: 2rem;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scroll-behavior: smooth;
+  padding: 1rem 0 2rem;
+  scroll-snap-type: x mandatory;
+}
+
+/* Cards alignées automatiquement */
+.card-physical {
+  scroll-snap-align: start;
+}
+
+
+/* Scrollbar minimal */
+.physical-grid::-webkit-scrollbar,
+.physical-carousel::-webkit-scrollbar {
+  height: 8px;
+}
+
+.physical-grid::-webkit-scrollbar-thumb,
+.physical-carousel::-webkit-scrollbar-thumb {
+  background: linear-gradient(90deg, #5da4ff, #459fff);
+  border-radius: 10px;
+}
+
+.physical-grid::-webkit-scrollbar-track,
+.physical-carousel::-webkit-scrollbar-track {
+  background: rgba(255,255,255,0.05);
+}
+
+
+.card-physical {
+  min-width: 280px;
+  backdrop-filter: blur(16px);
+  background: rgba(255,255,255,0.04);
+  border-radius: 18px;
+  border: 1px solid rgba(255,255,255,0.1);
+  box-shadow: 0 12px 40px rgba(0,0,0,0.45);
+  overflow: hidden;
+  transform: translateY(0) scale(1);
+  transition: 
+    transform .45s cubic-bezier(.2,.8,.2,1),
+    box-shadow .45s cubic-bezier(.2,.8,.2,1),
+    border-color .35s ease;
+  position: relative;
+}
+
+/* Effet hover FLUIDE + ELEVATION */
+.card-physical:hover {
+  transform: translateY(-14px) scale(1.06);
+  box-shadow: 0 32px 70px rgba(0,0,0,0.85);
+  border-color: rgba(255,255,255,0.35);
+}
+
+
+.card-physical-image {
+  height: 270px;
+  background-size: cover;
+  background-position: center;
+  transition: transform .5s ease, filter .5s ease;
+}
+
+.card-physical:hover .card-physical-image {
+  transform: scale(1.15);
+  filter: brightness(1.18) saturate(1.2);
+}
+
+
+.card-physical-actions .btn-primary,
+.card-physical-actions .btn-ghost {
+  position: relative;
+  overflow: hidden;
+}
+
+/* vague lumineuse */
+.card-physical-actions .btn-primary::after,
+.card-physical-actions .btn-ghost::after {
+  content: "";
+  position: absolute;
+  top: 0; left: -100%;
+  width: 200%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(255,255,255,0.4),
+    transparent
+  );
+  transition: transform .45s ease;
+  transform: translateX(-100%);
+}
+
+.card-physical-actions .btn-primary:hover::after,
+.card-physical-actions .btn-ghost:hover::after {
+  transform: translateX(100%);
+}
+
+.card-physical-body {
+  padding: 1.35rem 1.4rem 1.4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+}
+
+.card-physical-title {
+  font-weight: 700;
+  font-size: 1.08rem;
+}
+
+.card-physical-format {
+  opacity: 0.75;
+  font-size: 0.86rem;
+}
+
+.card-physical-price {
+  font-size: 1.18rem;
+  font-weight: 800;
+  color: #51ffa0;
+}
+
+.card-physical-actions {
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+  margin-top: 0.75rem;
+}
+
+.card-physical-actions .btn-primary {
+  background: linear-gradient(90deg, #58aaff, #68cfff);
+  border-radius: 10px;
+  padding: 0.65rem 1.1rem;
+  font-weight: 700;
+  transition: transform .25s ease;
+}
+
+.card-physical-actions .btn-primary:hover {
+  transform: translateY(-3px);
+}
+
+.card-physical-actions .btn-ghost {
+  border-radius: 10px;
+  border-width: 2px;
+  padding: 0.65rem 1.1rem;
+  border-color: rgba(255,255,255,0.35);
+}
+
+
+.badge-stock {
+  padding: 0.32rem 0.75rem;
+  border-radius: 999px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  background: rgba(90,255,160,0.1);
+  border: 1px solid rgba(120,255,190,0.9);
+  color: #74ffbf;
+  white-space: nowrap;
+  margin-left: auto;
+  cursor: default;
+}
+
+
+.card-physical {
+  opacity: 0;
+  animation: fadeUp .8s ease forwards;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
