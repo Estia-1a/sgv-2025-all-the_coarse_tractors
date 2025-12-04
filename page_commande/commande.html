@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>CineFlex – Commander une édition physique</title>
+
+  <!-- Si vous passez à UN SEUL fichier CSS, gardez uniquement cette ligne -->
+  <link rel="stylesheet" href="desktop.css">
+
+  <!-- (Sinon) Si vous conservez votre setup actuel, remettez vos deux feuilles :
+  <link rel="stylesheet" href="styles/desktop.css" media="screen and (min-width: 768px)">
+  <link rel="stylesheet" href="styles/mobile.css" media="screen and (max-width: 767px)">
+  -->
+</head>
+<body>
+  <!-- En-tête réutilisée -->
+  <header>
+    <div class="nav-bar">
+      <div class="logo">CineFlex</div>
+      <nav class="nav-links">
+        <a href="index.html#home">Accueil</a>
+        <a href="index.html#catalogue">Catalogue</a>
+        <a href="commande.html">Éditions physiques</a>
+        <a href="index.html#faq">Support</a>
+      </nav>
+      <div class="nav-actions">
+        <button class="btn btn-ghost">Se connecter</button>
+        <button class="btn btn-primary">S'inscrire</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="order-main">
+    <section class="order-hero">
+      <h1>Commander une édition physique</h1>
+      <p>Choisissez votre support (CD, DVD, Blu-ray, vinyle), indiquez vos informations et recevez votre commande sous 48h.</p>
+    </section>
+
+    <section class="order-content">
+      <!-- Colonne gauche : formulaire -->
+      <form class="order-form" action="#" method="post" novalidate>
+        <fieldset class="order-block">
+          <legend>Produit</legend>
+
+          <label for="title">Titre / Référence</label>
+          <input type="text" id="title" name="title" placeholder="Ex. Inception – Original Soundtrack" required>
+
+          <label for="format">Format</label>
+          <select id="format" name="format" required>
+            <option value="" selected disabled>— Sélectionner —</option>
+            <option>CD</option>
+            <option>DVD</option>
+            <option>Blu-ray</option>
+            <option>Vinyle</option>
+            <option>Collector</option>
+          </select>
+
+          <label for="quantity">Quantité</label>
+          <input type="number" id="quantity" name="quantity" min="1" value="1" required>
+
+          <div class="inline">
+            <label for="edition">Édition</label>
+            <select id="edition" name="edition">
+              <option>Standard</option>
+              <option>Steelbook</option>
+              <option>Édition limitée</option>
+            </select>
+
+            <label for="region">Zone/Region</label>
+            <select id="region" name="region">
+              <option>EU</option>
+              <option>US</option>
+              <option>JP</option>
+            </select>
+          </div>
+        </fieldset>
+
+        <fieldset class="order-block">
+          <legend>Livraison</legend>
+
+          <label for="lastname">Nom</label>
+          <input type="text" id="lastname" name="lastname" required>
+
+          <label for="firstname">Prénom</label>
+          <input type="text" id="firstname" name="firstname" required>
+
+          <label for="address">Adresse</label>
+          <input type="text" id="address" name="address" placeholder="N°, rue" required>
+
+          <div class="inline">
+            <div class="inline-item">
+              <label for="zip">Code postal</label>
+              <input type="text" id="zip" name="zip" required>
+            </div>
+            <div class="inline-item">
+              <label for="city">Ville</label>
+              <input type="text" id="city" name="city" required>
+            </div>
+          </div>
+
+          <label for="country">Pays</label>
+          <input type="text" id="country" name="country" value="France" required>
+
+          <label for="shipping">Mode de livraison</label>
+          <select id="shipping" name="shipping" required>
+            <option>Standard (48h)</option>
+            <option>Express (24h)</option>
+            <option>Point Relais</option>
+          </select>
+        </fieldset>
+
+        <fieldset class="order-block">
+          <legend>Paiement</legend>
+
+          <label for="email">E-mail (confirmation)</label>
+          <input type="email" id="email" name="email" placeholder="vous@exemple.com" required>
+
+          <div class="payment-row">
+            <label class="radio">
+              <input type="radio" name="paymethod" value="card" checked>
+              Carte bancaire
+            </label>
+            <label class="radio">
+              <input type="radio" name="paymethod" value="paypal">
+              PayPal
+            </label>
+            <label class="radio">
+              <input type="radio" name="paymethod" value="applepay">
+              Apple Pay
+            </label>
+          </div>
+
+          <!-- Placeholders d’inputs CB si besoin (optionnels ici) -->
+          <div class="card-grid">
+            <input type="text" inputmode="numeric" placeholder="Numéro de carte" aria-label="Numéro de carte">
+            <input type="text" inputmode="numeric" placeholder="MM/AA" aria-label="Date d’expiration">
+            <input type="text" inputmode="numeric" placeholder="CVC" aria-label="CVC">
+          </div>
+        </fieldset>
+
+        <div class="actions">
+          <button type="reset" class="btn btn-ghost">Annuler</button>
+          <button type="submit" class="btn btn-primary">Valider la commande</button>
+        </div>
+      </form>
+
+      <!-- Colonne droite : récap -->
+      <aside class="order-summary">
+        <h2>Récapitulatif</h2>
+        <ul class="summary-list">
+          <li><span>Article</span><span id="sum-title">—</span></li>
+          <li><span>Format</span><span id="sum-format">—</span></li>
+          <li><span>Édition</span><span id="sum-edition">—</span></li>
+          <li><span>Zone</span><span id="sum-region">—</span></li>
+          <li><span>Quantité</span><span id="sum-qty">1</span></li>
+          <li><span>Livraison</span><span id="sum-ship">Standard (48h)</span></li>
+        </ul>
+        <hr>
+        <div class="total-row">
+          <span>Total estimé</span>
+          <span class="total-price">—</span>
+        </div>
+        <p class="summary-note">Le total sera calculé lors du paiement. Taxes et frais de port applicables.</p>
+      </aside>
+    </section>
+  </main>
+
+  <footer class="order-footer">
+    <p>© CineFlex – Streaming & Éditions physiques</p>
+  </footer>
+
+  <!-- (Optionnel) Petit script pour synchroniser le récap côté client -->
+  <script>
+    const title = document.querySelector('#title');
+    const format = document.querySelector('#format');
+    const edition = document.querySelector('#edition');
+    const region = document.querySelector('#region');
+    const qty = document.querySelector('#quantity');
+    const shipping = document.querySelector('#shipping');
+
+    const sumTitle = document.querySelector('#sum-title');
+    const sumFormat = document.querySelector('#sum-format');
+    const sumEdition = document.querySelector('#sum-edition');
+    const sumRegion = document.querySelector('#sum-region');
+    const sumQty = document.querySelector('#sum-qty');
+    const sumShip = document.querySelector('#sum-ship');
+
+    function syncSummary() {
+      sumTitle.textContent = title.value || '—';
+      sumFormat.textContent = format.value || '—';
+      sumEdition.textContent = edition.value || '—';
+      sumRegion.textContent = region.value || '—';
+      sumQty.textContent = qty.value || '1';
+      sumShip.textContent = shipping.value || 'Standard (48h)';
+    }
+    ['input','change'].forEach(evt => {
+      document.addEventListener(evt, syncSummary);
+    });
+    syncSummary();
+  </script>
+</body>
+</html>
