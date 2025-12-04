@@ -592,3 +592,48 @@ body.scrolled header {
     transform: translateY(0);
   }
 }
+/* Fix boutons + centrage*/
+
+.card-physical-actions button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  /* Hauteur uniforme */
+  min-height: 55px;
+
+  /* Texte lisible */
+  line-height: 1.2;
+  font-weight: 700;
+  font-size: 0.95rem;
+}
+
+
+/* Bouton principal — Bleu cinéma */
+.card-physical-actions .btn-primary {
+  background: linear-gradient(90deg, #3c8dff, #66bbff);
+  color: #fff;
+  border: none;
+}
+
+/* Hover effet premium */
+.card-physical-actions .btn-primary:hover {
+  background: linear-gradient(90deg, #61a7ff, #86d1ff);
+  transform: translateY(-3px);
+  box-shadow: 0 0 18px rgba(97,167,255,0.35);
+}
+
+
+/* Bouton fantôme — design streaming */
+.card-physical-actions .btn-ghost {
+  border: 2px solid rgba(255,255,255,0.4);
+  color: #fff;
+  background: rgba(255,255,255,0.05);
+}
+
+/* Hover fantôme premium */
+.card-physical-actions .btn-ghost:hover {
+  border-color: rgba(255,255,255,0.7);
+  background: rgba(255,255,255,0.12);
+}
