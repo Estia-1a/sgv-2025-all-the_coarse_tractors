@@ -255,7 +255,7 @@ body {
 /*Annimation*/
 
 header {
-  transition: background 0.35s ease, backdrop-filter 0.35s ease;
+  transition: all 0.35s ease, backdrop-filter 0.35s ease;
 }
 
 body.scrolled header {
@@ -263,19 +263,7 @@ body.scrolled header {
   backdrop-filter: blur(18px);
 }
 
-
-/*Effet*/
-window.addEventListener("scroll", () => {
-  if (window.scrollY > 30) {
-    document.body.classList.add("scrolled");
-  } else {
-    document.body.classList.remove("scrolled");
-  }
-});
-
-
 /* effet cyan*/
-
 .nav-links a:hover {
   color: #7ecaff;
   opacity: 1;
@@ -323,4 +311,100 @@ window.addEventListener("scroll", () => {
 
 .hero-card li::before {
   color: #66b3ff;
+}
+
+/* Carousel fluide/moderne*/
+
+.carousel {
+  display: flex;
+  gap: 1.2rem;
+  overflow-x: auto;
+  padding-bottom: 1rem;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  overscroll-behavior-x: contain;
+}
+
+/* barre de scroll propre */
+.carousel::-webkit-scrollbar {
+  height: 6px;
+}
+
+.carousel::-webkit-scrollbar-thumb {
+  background: rgba(120,200,255,0.35);
+  border-radius: 20px;
+}
+
+.carousel::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/*Affiche Films*/
+
+.card-media {
+  position: relative;
+  flex: 0 0 auto;
+  width: 190px;
+  border-radius: 12px;
+  overflow: hidden;
+  scroll-snap-align: start;
+  background: rgba(255,255,255,0.06);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 6px 25px rgba(0,0,0,0.55);
+  transition: 0.25s ease;
+}
+
+/* zoom fluide */
+.card-media:hover {
+  transform: scale(1.05);
+  box-shadow: 0 14px 45px rgba(0,0,0,0.7);
+}
+
+/* image responsive */
+.card-media img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/*Ifos Films*/
+
+.card-media-info {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 0.65rem;
+  background: linear-gradient(to top, rgba(0,0,0,0.75), transparent);
+  backdrop-filter: blur(6px);
+  opacity: 0;
+  transition: opacity 0.25s ease;
+}
+
+.card-media:hover .card-media-info {
+  opacity: 1;
+}
+
+.card-media-title {
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.card-media-meta {
+  font-size: 0.75rem;
+  opacity: 0.75;
+}
+
+/* badge style*/
+.badge-physique {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  background: rgba(80, 160, 255, 0.85);
+  color: #001;
+  font-size: 0.65rem;
+  font-weight: 700;
+  padding: 0.25rem 0.55rem;
+  border-radius: 6px;
+  backdrop-filter: blur(4px);
+  box-shadow: 0 0 8px rgba(80,160,255,0.4);
 }
