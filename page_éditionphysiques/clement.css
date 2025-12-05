@@ -1,0 +1,283 @@
+/* ===========================================================
+   RESET + BASE DU SITE (identique à la page d’accueil)
+   =========================================================== */
+
+html, body {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: hsl(0, 0%, 0%);
+  color: white;
+  line-height: 1.5;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* ===========================================================
+   HEADER IDENTIQUE À LA PAGE D’ACCUEIL
+   =========================================================== */
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: linear-gradient(
+    to bottom,
+    rgba(50, 140, 255, 0.45),
+    rgba(10, 30, 60, 0.50)
+  );
+  backdrop-filter: blur(14px);
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+  z-index: 1000;
+  transition: all 0.35s ease;
+}
+
+body.scrolled header {
+  background: rgba(20, 40, 90, 0.65);
+  backdrop-filter: blur(18px);
+}
+
+.nav-bar {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 1rem 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  font-size: 2rem;
+  font-weight: 900;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: white;
+}
+
+.nav-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.nav-links a {
+  white-space: nowrap;
+  opacity: 1;
+  transition: 0.25s ease;
+}
+
+.nav-links a:hover {
+  color: #7ecaff;
+}
+
+.nav-actions {
+  display: flex;
+  gap: 0.8rem;
+  align-items: center;
+}
+
+/* Boutons */
+
+.btn {
+  border: none;
+  padding: 0.55rem 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.btn-primary {
+  background-color: #66b3ff;
+  color: black;
+}
+
+.btn-primary:hover {
+  background-color: #80c7ff;
+}
+
+.btn-ghost {
+  background-color: transparent;
+  border: 1px solid rgba(160, 210, 255, 0.5);
+  color: white;
+}
+
+.btn-ghost:hover {
+  border-color: #a8d9ff;
+  box-shadow: 0 0 8px rgba(160,210,255,0.5);
+}
+
+/* Décalage du contenu (header fixe) */
+body {
+  padding-top: 90px;
+}
+
+
+/* ===========================================================
+   BASE SPÉCIFIQUE À LA PAGE ÉDITIONS PHYSIQUES
+   (la suite se construira ici au fur et à mesure)
+   =========================================================== */
+
+.editions-container {
+  max-width: 1200px;
+  width: 100%;
+  margin: 2rem auto;
+  padding: 1rem 1.5rem;
+}
+
+.editions-title {
+  font-size: clamp(2rem, 4vw, 2.8rem);
+  font-weight: 800;
+  margin-bottom: 1rem;
+  text-shadow: 0 3px 8px rgba(0,0,0,0.6);
+}
+
+.editions-intro {
+  font-size: 1rem;
+  opacity: 0.85;
+  max-width: 42rem;
+  margin-bottom: 2.2rem;
+}
+
+/* =============================== */
+/*      GRILLE PRODUITS PHYSIQUE   */
+/* =============================== */
+
+.editions-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+
+/* ======= Carte produit ======= */
+
+.edition-card {
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.12);
+    border-radius: 14px;
+    padding: 1.2rem;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+    transition: 0.3s ease;
+    text-align: center;
+}
+
+.edition-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 14px 45px rgba(0,0,0,0.7);
+}
+
+/* Images CD */
+.edition-img {
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 0.8rem;
+}
+
+/* Titre */
+.edition-title {
+    font-size: 1.05rem;
+    font-weight: 700;
+    margin-bottom: 0.3rem;
+}
+
+/* Format / infos */
+.edition-meta {
+    font-size: 0.85rem;
+    opacity: 0.75;
+    margin-bottom: 0.8rem;
+}
+
+/* Prix */
+.edition-price {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #66b3ff;
+    margin-bottom: 0.8rem;
+}
+
+
+/* ===== État du stock ===== */
+
+.edition-stock {
+    display: inline-block;
+    padding: 0.35rem 0.8rem;
+    border-radius: 999px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+/* Stock OK */
+.stock-ok {
+    background: rgba(90,255,160,0.12);
+    color: #63ffb6;
+    border: 1px solid rgba(120,255,190,0.7);
+}
+
+/* Stock faible */
+.stock-medium {
+    background: rgba(255,200,90,0.12);
+    color: #ffdd88;
+    border: 1px solid rgba(255,210,120,0.5);
+}
+
+/* Stock critique */
+.stock-hot {
+    background: rgba(255,90,90,0.12);
+    color: #ff8c8c;
+    border: 1px solid rgba(255,120,120,0.6);
+}
+
+/* Précommande */
+.stock-preorder {
+    background: rgba(100,140,255,0.12);
+    color: #9fbdff;
+    border: 1px solid rgba(140,170,255,0.6);
+}
+
+/* ==================== */
+/*    Bouton panier     */
+/* ==================== */
+
+.edition-btn {
+    width: 100%;
+    padding: 0.7rem;
+    font-weight: 700;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+
+    background: linear-gradient(90deg, #66b3ff, #88ccff);
+    color: #000;
+
+    transition: 0.25s ease;
+}
+
+.edition-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 0 12px rgba(120,200,255,0.4);
+}
