@@ -1,0 +1,161 @@
+/* ===========================================================
+   RESET + BASE DU SITE (identique à la page d’accueil)
+   =========================================================== */
+
+html, body {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: hsl(0, 0%, 0%);
+  color: white;
+  line-height: 1.5;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* ===========================================================
+   HEADER IDENTIQUE À LA PAGE D’ACCUEIL
+   =========================================================== */
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: linear-gradient(
+    to bottom,
+    rgba(50, 140, 255, 0.45),
+    rgba(10, 30, 60, 0.50)
+  );
+  backdrop-filter: blur(14px);
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+  z-index: 1000;
+  transition: all 0.35s ease;
+}
+
+body.scrolled header {
+  background: rgba(20, 40, 90, 0.65);
+  backdrop-filter: blur(18px);
+}
+
+.nav-bar {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 1rem 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  font-size: 2rem;
+  font-weight: 900;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: white;
+}
+
+.nav-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.nav-links a {
+  white-space: nowrap;
+  opacity: 1;
+  transition: 0.25s ease;
+}
+
+.nav-links a:hover {
+  color: #7ecaff;
+}
+
+.nav-actions {
+  display: flex;
+  gap: 0.8rem;
+  align-items: center;
+}
+
+/* Boutons */
+
+.btn {
+  border: none;
+  padding: 0.55rem 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.btn-primary {
+  background-color: #66b3ff;
+  color: black;
+}
+
+.btn-primary:hover {
+  background-color: #80c7ff;
+}
+
+.btn-ghost {
+  background-color: transparent;
+  border: 1px solid rgba(160, 210, 255, 0.5);
+  color: white;
+}
+
+.btn-ghost:hover {
+  border-color: #a8d9ff;
+  box-shadow: 0 0 8px rgba(160,210,255,0.5);
+}
+
+/* Décalage du contenu (header fixe) */
+body {
+  padding-top: 90px;
+}
+
+
+/* ===========================================================
+   BASE SPÉCIFIQUE À LA PAGE ÉDITIONS PHYSIQUES
+   (la suite se construira ici au fur et à mesure)
+   =========================================================== */
+
+.editions-container {
+  max-width: 1200px;
+  width: 100%;
+  margin: 2rem auto;
+  padding: 1rem 1.5rem;
+}
+
+.editions-title {
+  font-size: clamp(2rem, 4vw, 2.8rem);
+  font-weight: 800;
+  margin-bottom: 1rem;
+  text-shadow: 0 3px 8px rgba(0,0,0,0.6);
+}
+
+.editions-intro {
+  font-size: 1rem;
+  opacity: 0.85;
+  max-width: 42rem;
+  margin-bottom: 2.2rem;
+}
+
+/* (la grille produits, filtres, cartes… viendront plus tard) */
