@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CineFlex – Éditions physiques</title>
+
+    <!-- Lien vers TON CSS spécifique -->
+    <link rel="stylesheet" href="clement.css">
+</head>
+
+<body>
+
+<!-- ===========================
+     HEADER IDENTIQUE ACCUEIL
+     =========================== -->
+<header>
+    <div class="nav-bar">
+        <div class="logo">CineFlex</div>
+
+        <nav class="nav-links">
+            <a href="../index.html#home">Accueil</a>
+            <a href="../index.html#catalogue">Catalogue</a>
+            <a href="editions.html">Éditions physiques</a>
+            <a href="../index.html#faq">Support</a>
+        </nav>
+
+        <div class="nav-actions">
+            <button class="btn btn-ghost">Se connecter</button>
+            <button class="btn btn-primary">S'inscrire</button>
+        </div>
+    </div>
+</header>
+
+
+<!-- Effet scroll du header -->
+<script>
+window.addEventListener("scroll", () => {
+    if (window.scrollY > 30) {
+        document.body.classList.add("scrolled");
+    } else {
+        document.body.classList.remove("scrolled");
+    }
+});
+</script>
+
+
+<!-- ===========================
+     CONTENU DE LA PAGE ÉDITIONS
+     =========================== -->
+
+<main class="editions-container">
+
+    <h1 class="editions-title">Éditions Physiques</h1>
+
+    <p class="editions-intro">
+        Découvrez nos Blu-ray, DVD, vinyles et éditions collectors soigneusement sélectionnés.
+        Chaque article est expédié sous 48h et vérifié par notre équipe.
+    </p>
+
+    <!-- SECTION FUTURE : FILTRES
+    <div class="editions-filters">
+        <span class="filter-tag">Blu-ray</span>
+        <span class="filter-tag">DVD</span>
+        <span class="filter-tag">Vinyles</span>
+        <span class="filter-tag">Collectors</span>
+    </div>
+    -->
+
+    <!-- SECTION FUTURE : GRILLE PRODUITS -->
+    <div class="editions-grid">
+        <!-- On ajoutera les cartes pro
