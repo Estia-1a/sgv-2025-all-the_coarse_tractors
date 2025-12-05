@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="stylesheet" href="styles/desktop.css" media="screen and (min-width: 768px)"> 
-    <link rel="stylesheet" href="styles/mobile.css" media="screen and (max-width: 767px)"> 
+    <link rel="stylesheet" href="styles/mobile.css" media="screen and (max-width: 767px)">
     <title>CineFlex - Streaming & Médiathèque</title>
 </head>
 <body>
@@ -16,7 +16,7 @@
       <nav class="nav-links">
         <a href="#home">Accueil</a>
         <a href="#catalogue">Catalogue</a>
-        <a href="#physique">Éditions physiques</a>
+        <a href="page_commande/commande.html">Éditions physiques</a>
         <a href="#faq">Support</a>
       </nav>
       <div class="nav-actions">
@@ -125,6 +125,7 @@ window.addEventListener("scroll", () => {
 
     <!--Cinquième film-->
     <article class="card-media">
+      <span class="badge-physique">Nouvel épisode</span>
       <img src="media/pictures/5e film.webp" alt="Anime 5">
       <div class="card-media-info">
         <div class="card-media-title">One Piece : EggHead Island</div>
@@ -204,6 +205,10 @@ window.addEventListener("scroll", () => {
         <button type="submit" class="btn btn-primary">Rechercher</button>
       </form>
     </section>
+    <div class="select-wrapper">
+  <select>…</select>
+</div>
+
 <!-- SECTION PHYSIQUE -->
 <section id="physique">
       <div class="section-header">
