@@ -610,7 +610,7 @@ body.scrolled header {
 }
 
 
-/* Bouton principal — Bleu cinéma */
+/* Bouton principal*/
 .card-physical-actions .btn-primary {
   background: linear-gradient(90deg, #3c8dff, #66bbff);
   color: #fff;
@@ -625,15 +625,189 @@ body.scrolled header {
 }
 
 
-/* Bouton fantôme — design streaming */
+/* Bouton fantôme*/
 .card-physical-actions .btn-ghost {
   border: 2px solid rgba(255,255,255,0.4);
   color: #fff;
   background: rgba(255,255,255,0.05);
 }
 
-/* Hover fantôme premium */
 .card-physical-actions .btn-ghost:hover {
   border-color: rgba(255,255,255,0.7);
   background: rgba(255,255,255,0.12);
 }
+
+/*Barre de recherche*/
+
+.search-bar {
+  margin-top: 0.8rem;
+  margin-bottom: 1.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.9rem;
+  align-items: center;
+}
+
+/*Style "verre" */
+.search-bar input,
+.search-bar select {
+  background: rgba(255,255,255,0.08);
+  backdrop-filter: blur(6px);
+  border: 1px solid rgba(120,200,255,0.25);
+  border-radius: 14px;
+  padding: 0.65rem 0.9rem;
+  font-size: 0.9rem;
+  color: white;
+  min-width: 180px;
+  transition: 
+    background .25s ease,
+    transform .25s ease,
+    border-color .25s ease;
+}
+
+/* texte*/
+.search-bar input::placeholder {
+  color: rgba(200,200,200,0.6);
+}
+
+/*Effet hover */
+.search-bar input:hover,
+.search-bar select:hover {
+  background: rgba(255,255,255,0.12);
+  border-color: rgba(120,200,255,0.5);
+  transform: scale(1.04);
+}
+
+/*Focus (clique)*/
+.search-bar input:focus,
+.search-bar select:focus {
+  outline: none;
+  border-color: #66b3ff;
+  background: rgba(120,200,255,0.18);
+  box-shadow: 0 0 12px rgba(120,200,255,0.6);
+}
+
+/* menu déroulant */
+.search-bar select {
+  cursor: pointer;
+  color: rgba(255,255,255,0.9);
+}
+
+/* options internes du menu */
+.search-bar select option {
+  background-color: #00121f;
+  color: white;
+}
+
+/* bouton rechercher*/
+.search-bar button {
+  background: linear-gradient(90deg, #58aaff, #7cccff);
+  border-radius: 14px;
+  padding: 0.75rem 1.4rem;
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: black;
+  transition: transform .2s ease;
+}
+
+/* effet hover du bouton */
+.search-bar button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(120,200,255,0.3);
+}
+
+/* petite animation*/
+.search-bar input,
+.search-bar select,
+.search-bar button {
+  opacity: 0;
+  animation: fadeSearch .6s ease forwards;
+}
+@keyframes fadeSearch {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/*Menu déroulant*/
+
+.search-bar select {
+  appearance: none;
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(120,200,255,0.25);
+  border-radius: 14px;
+  padding: 0.65rem 1rem;
+  font-size: 0.9rem;
+  color: #cde6ff;
+  min-width: 150px;
+  transition: 
+    background 0.25s ease,
+    border-color 0.25s ease,
+    box-shadow 0.35s ease,
+    transform 0.25s ease;
+  backdrop-filter: blur(8px);
+}
+
+/* icône flèche invisible (modern UI) */
+.search-bar select::-ms-expand {
+  display: none;
+}
+
+/* hover */
+.search-bar select:hover {
+  border-color: rgba(120,200,255,0.45);
+  background: rgba(120,200,255,0.08);
+  transform: scale(1.03);
+  box-shadow: 0 0 12px rgba(120,200,255,0.25);
+}
+
+/* focus (quand ouvert ou sélectionné) */
+.search-bar select:focus {
+  outline: none;
+  border-color: #66b3ff;
+  background: rgba(120,200,255,0.18);
+  box-shadow: 0 0 18px rgba(120,200,255,0.45);
+  transform: scale(1.05);
+}
+
+/* OPTION interne stylée */
+.search-bar select option {
+  background: #0d0d0f;
+  color: #e6f4ff;
+  padding: 0.7rem;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+  font-size: 0.9rem;
+}
+
+/* hover sur chaque option (Chrome/Edge) */
+.search-bar select option:hover {
+  background: rgba(120,200,255,0.25);
+  color: #000;
+}
+
+/* option active */
+.search-bar select option:checked {
+  background: #66b3ff;
+  color: #000;
+}
+.select-wrapper {
+  position: relative;
+}
+
+.select-wrapper::after {
+  content: "▼";
+  position: absolute;
+  right: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+  font-size: 0.8rem;
+  color: #66b3ff;
+  opacity: 0.6;
+  transition: 0.25s ease;
+}
+
+.search-bar select:hover + .select-wrapper::after {
+  opacity: 1;
+}
+
+
