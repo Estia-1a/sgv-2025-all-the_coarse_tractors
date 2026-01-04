@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- Styles existants -->
+<link rel="stylesheet" href="styles/desktop.css">
+<link rel="stylesheet" href="styles/mobile.css">
+<!-- Nouveau style dédié auth -->
+<link rel="stylesheet" href="styles/auth.css">
+<title>CineFlex - S'inscrire</title>
+</head>
+<body class="auth-page">
+<!-- Header (identique à l'accueil) -->
+<header>
+<div class="nav-bar">
+<div class="logo">CineFlex</div>
+<nav class="nav-links">
+<a href="index.html">Accueil</a>
+<a href="index.html#catalogue">Catalogue</a>
+<a href="page_commande/commande.html">Éditions physiques</a>
+<a href="support.html">Support</a>
+</nav>
+<div class="nav-actions">
+<a class="btn btn-ghost" href="login.html">Se connecter</a>
+<a class="btn btn-primary is-active" href="signup.html">S'inscrire</a>
+</div>
+</div>
+</header>
+<main>
+<section class="auth-shell" aria-labelledby="auth-title">
+<div class="auth-card">
+<div class="auth-header">
+<p class="auth-kicker">Rejoindre CineFlex</p>
+<h1 id="auth-title">Créer un compte</h1>
+<p class="auth-subtitle">Un compte unique pour streamer et commander en physique.</p>
+</div>
+<form class="auth-form" action="#" method="post">
+<div class="auth-grid">
+<div class="auth-field">
+<label for="firstname">Prénom</label>
+<input id="firstname" name="firstname" type="text" autocomplete="given-name" required placeholder="Andy">
+</div>
+<div class="auth-field">
+<label for="lastname">Nom</label>
+<input id="lastname" name="lastname" type="text" autocomplete="family-name" required placeholder="Coste">
+</div>
+</div>
+<div class="auth-field">
+<label for="email">E-mail</label>
+<input id="email" name="email" type="email" autocomplete="email" required placeholder="ex: andy@email.com">
+</div>
+<div class="auth-field">
+<label for="password">Mot de passe</label>
+<div class="auth-password">
+<input id="password" name="password" type="password" autocomplete="new-password" required placeholder="8 caractères min.">
+<button class="auth-eye" type="button" aria-label="Afficher/masquer le mot de passe">👁</button>
+</div>
+<p class="auth-hint">Astuce : mélange lettres, chiffres et un symbole.</p>
+</div>
+<div class="auth-field">
+<label for="plan">Offre</label>
+<select id="plan" name="plan">
+<option value="standard">Standard</option>
+<option value="premium" selected>Premium (recommandé)</option>
+<option value="family">Famille</option>
+</select>
+</div>
+<label class="auth-check auth-terms">
+<input type="checkbox" name="terms" required>
+<span>J’accepte les conditions d’utilisation et la politique de confidentialité.</span>
+</label>
+<button class="btn btn-primary auth-submit" type="submit">Créer mon compte</button>
+<div class="auth-divider" aria-hidden="true">
+<span>ou</span>
+</div>
+<button class="btn btn-ghost auth-alt" type="button">S’inscrire avec Google</button>
+<button class="btn btn-ghost auth-alt" type="button">S’inscrire avec Apple</button>
+<p class="auth-footer">
+           Déjà un compte ?
+<a class="auth-link" href="login.html">Se connecter</a>
+</p>
+</form>
+</div>
+<aside class="auth-side" aria-label="Offre Premium">
+<div class="auth-side-card highlight">
+<h2>Premium</h2>
+<p>La meilleure expérience CineFlex, pensée pour un rendu “plateforme de streaming”.</p>
+<ul>
+<li>Qualité 4K (si disponible)</li>
+<li>Téléchargement hors-ligne (maquette)</li>
+<li>Accès prioritaire aux éditions limitées</li>
+</ul>
+<div class="auth-side-price">
+<span class="price">9,99 €</span>
+<span class="per">/mois</span>
+</div>
+</div>
+</aside>
+</section>
+</main>
+<script>
+   (function () {
+     const btn = document.querySelector(".auth-eye");
+     const input = document.querySelector("#password");
+     if (!btn || !input) return;
+     btn.addEventListener("click", () => {
+       input.type = input.type === "password" ? "text" : "password";
+     });
+   })();
+</script>
+</body>
+</html>

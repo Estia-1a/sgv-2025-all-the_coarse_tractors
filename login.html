@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- Styles existants -->
+<link rel="stylesheet" href="styles/desktop.css">
+<link rel="stylesheet" href="styles/mobile.css">
+<!-- Nouveau style dédié auth -->
+<link rel="stylesheet" href="styles/auth.css">
+<title>CineFlex - Se connecter</title>
+</head>
+<body class="auth-page">
+<!-- Header (identique à l'accueil) -->
+<header>
+<div class="nav-bar">
+<div class="logo">CineFlex</div>
+<nav class="nav-links">
+<a href="index.html">Accueil</a>
+<a href="index.html#catalogue">Catalogue</a>
+<a href="page_commande/commande.html">Éditions physiques</a>
+<a href="support.html">Support</a>
+</nav>
+<div class="nav-actions">
+<a class="btn btn-ghost is-active" href="login.html">Se connecter</a>
+<a class="btn btn-primary" href="signup.html">S'inscrire</a>
+</div>
+</div>
+</header>
+<main>
+<section class="auth-shell" aria-labelledby="auth-title">
+<div class="auth-card">
+<div class="auth-header">
+<p class="auth-kicker">Bienvenue sur CineFlex</p>
+<h1 id="auth-title">Se connecter</h1>
+<p class="auth-subtitle">Accédez à votre compte pour reprendre vos visionnages.</p>
+</div>
+<form class="auth-form" action="#" method="post">
+<div class="auth-field">
+<label for="email">E-mail</label>
+<input id="email" name="email" type="email" autocomplete="email" required placeholder="ex: andy@email.com">
+</div>
+<div class="auth-field">
+<label for="password">Mot de passe</label>
+<div class="auth-password">
+<input id="password" name="password" type="password" autocomplete="current-password" required placeholder="Votre mot de passe">
+<button class="auth-eye" type="button" aria-label="Afficher/masquer le mot de passe">👁</button>
+</div>
+</div>
+<div class="auth-row">
+<label class="auth-check">
+<input type="checkbox" name="remember" checked>
+<span>Rester connecté</span>
+</label>
+<a class="auth-link" href="#">Mot de passe oublié ?</a>
+</div>
+<button class="btn btn-primary auth-submit" type="submit">Se connecter</button>
+<div class="auth-divider" aria-hidden="true">
+<span>ou</span>
+</div>
+<button class="btn btn-ghost auth-alt" type="button">Continuer avec Google</button>
+<button class="btn btn-ghost auth-alt" type="button">Continuer avec Apple</button>
+<p class="auth-footer">
+           Pas encore de compte ?
+<a class="auth-link" href="signup.html">Créer un compte</a>
+</p>
+</form>
+</div>
+<aside class="auth-side" aria-label="Avantages">
+<div class="auth-side-card">
+<h2>Pourquoi se connecter ?</h2>
+<ul>
+<li>Reprise instantanée sur tous vos appareils</li>
+<li>Liste de lecture synchronisée</li>
+<li>Promos exclusives sur les éditions collectors</li>
+</ul>
+<div class="auth-side-badges">
+<span class="auth-badge">Streaming HD &amp; 4K</span>
+<span class="auth-badge">Sans engagement</span>
+<span class="auth-badge">Support premium</span>
+</div>
+</div>
+</aside>
+</section>
+</main>
+<script>
+   (function () {
+     const btn = document.querySelector(".auth-eye");
+     const input = document.querySelector("#password");
+     if (!btn || !input) return;
+     btn.addEventListener("click", () => {
+       input.type = input.type === "password" ? "text" : "password";
+     });
+   })();
+</script>
+</body>
+</html>
