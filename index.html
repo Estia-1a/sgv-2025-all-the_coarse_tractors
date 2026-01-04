@@ -1,285 +1,286 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="styles/desktop.css" media="screen and (min-width: 768px)"> 
-    <link rel="stylesheet" href="styles/mobile.css" media="screen and (max-width: 767px)">
-    <title>CineFlex - Streaming & Médiathèque</title>
+  <link rel="stylesheet" href="styles/desktop.css">
+  <link rel="stylesheet" href="styles/mobile.css">
+
+  <title>CineFlex - Streaming &amp; Médiathèque</title>
 </head>
+
 <body>
-  <!--Barre de tâche-->
-<header>
+  <!-- Barre de tâche -->
+  <header>
     <div class="nav-bar">
       <div class="logo">CineFlex</div>
+
       <nav class="nav-links">
         <a href="index.html">Accueil</a>
         <a href="#catalogue">Catalogue</a>
         <a href="page_commande/commande.html">Éditions physiques</a>
-        <a href="#faq">Support</a>
+        <a href="support.html">Support</a>
       </nav>
+
       <div class="nav-actions">
-        <button class="btn btn-ghost">Se connecter</button>
-        <button class="btn btn-primary">S'inscrire</button>
+        <button class="btn btn-ghost" type="button">Se connecter</button>
+        <button class="btn btn-primary" type="button">S'inscrire</button>
       </div>
     </div>
   </header>
-  <!--Texte principaux-->
-  <script>
 
-/*effet*/
-window.addEventListener("scroll", () => {
-  if (window.scrollY > 30) {
-    document.body.classList.add("scrolled");
-  } else {
-    document.body.classList.remove("scrolled");
-  }
-});
-</script>
+  <main>
+    <!-- HERO -->
+    <section id="home" class="hero">
+      <div class="hero-content">
+        <div class="hero-text">
+          <h1>Une seule plateforme pour <span>streamer &amp; collectionner</span> vos médias.</h1>
+          <p>
+            Films, séries, animés, documentaires, concerts… Regardez en illimité en ligne et commandez les éditions
+            physiques (DVD, Blu-ray, vinyles, collectors) en quelques clics.
+          </p>
 
-</body>
-<section id="home" class="hero">
-    <div class="hero-content">
-      <div class="hero-text">
-        <h1>Une seule plateforme pour <span>streamer & collectionner</span> vos médias.</h1>
-        <p>
-          Films, séries, animés, documentaires, concerts… Regardez en illimité en ligne et commandez les éditions
-          physiques (DVD, Blu-ray, vinyles, collectors) en quelques clics.
-        </p>
+          <div class="hero-tags">
+            <span class="tag">Streaming HD &amp; 4K</span>
+            <span class="tag">Éditions limitées</span>
+            <span class="tag">Livraison sous 48h</span>
+          </div>
 
-        <div class="hero-tags">
-          <span class="tag">Streaming HD & 4K</span>
-          <span class="tag">Éditions limitées</span>
-          <span class="tag">Livraison sous 48h</span>
+          <div class="hero-actions">
+            <button class="btn btn-primary" type="button">Commencer l'essai gratuit</button>
+            <button class="btn btn-ghost" type="button">Parcourir le catalogue</button>
+          </div>
+
+          <p class="hero-note">Annulez à tout moment. Sans engagement.</p>
         </div>
 
-        <div class="hero-actions">
-          <button class="btn btn-primary">Commencer l'essai gratuit</button>
-          <button class="btn btn-ghost">Parcourir le catalogue</button>
-        </div>
-        <p class="hero-note">Annulez à tout moment. Sans engagement.</p>
+        <aside class="hero-card">
+          <h2>Combo streaming + physique</h2>
+          <p>
+            Ajoutez un film à votre liste, regardez-le instantanément, puis commandez la version physique si vous
+            voulez l'ajouter à votre collection.
+          </p>
+          <ul>
+            <li>Synchronisation de votre bibliothèque numérique &amp; physique</li>
+            <li>Réductions sur les coffrets collectors</li>
+            <li>Suivi de commande en temps réel</li>
+          </ul>
+          <button class="btn btn-primary" type="button">Voir les offres</button>
+        </aside>
+      </div>
+    </section>
+
+    <!-- CATALOGUE STREAMING -->
+    <section id="catalogue">
+      <div class="section-header">
+        <h2>Continuer à regarder</h2>
+        <span>Basé sur vos derniers visionnages</span>
       </div>
 
-      <aside class="hero-card">
-        <h2>Combo streaming + physique</h2>
-        <p>Ajoutez un film à votre liste, regardez-le instantanément, puis commandez la version physique si vous
-          voulez l'ajouter à votre collection.</p>
-        <ul>
-          <li>Synchronisation de votre bibliothèque numérique & physique</li>
-          <li>Réductions sur les coffrets collectors</li>
-          <li>Suivi de commande en temps réel</li>
-        </ul>
-        <button class="btn btn-primary">Voir les offres</button>
-      </aside>
-    </div>
-  </section>
-   <main>
-<!-- CATALOGUE STREAMING -->
-<section id="catalogue">
-  <div class="section-header">
-    <h2>Continuer à regarder</h2>
-    <span>Basé sur vos derniers visionnages</span>
-  </div>
+      <div class="carousel">
+        <article class="card-media">
+          <span class="badge-physique">Dispo en Blu-ray ou location</span>
+          <img src="media/pictures/Conjuring.jpg" alt="Affiche : Conjuring : Les Dossiers Warren">
+          <div class="card-media-info">
+            <h3 class="card-media-title">Conjuring : Les Dossiers Warren</h3>
+            <div class="card-media-meta">Film • 1h50 • Horreur</div>
+          </div>
+        </article>
 
-  <!--Début Carousel-->
-  <div class="carousel">
+        <article class="card-media">
+          <img src="media/pictures/2e%20film.webp" alt="Affiche : Breaking Bad">
+          <div class="card-media-info">
+            <h3 class="card-media-title">Breaking Bad</h3>
+            <div class="card-media-meta">Série • S1-E7 • Drame</div>
+          </div>
+        </article>
 
-    <!--Premier film-->
-    <article class="card-media">
-      <span class="badge-physique">Dispo en Blu-ray ou location</span>
-      <img src="media/pictures/Conjuring.jpg" alt="Film 1">
-      <div class="card-media-info">
-        <div class="card-media-title">Conjuring : Les Dossiers Warren</div>
-        <div class="card-media-meta">Film • 1h50 • Horreur</div>
+        <article class="card-media">
+          <span class="badge-physique">Dispo en Location</span>
+          <img src="media/pictures/3e%20film.jpg" alt="Affiche : Avengers : Endgame">
+          <div class="card-media-info">
+            <h3 class="card-media-title">Avengers : Endgame</h3>
+            <div class="card-media-meta">Film • 3h01 • Action/SF</div>
+          </div>
+        </article>
+
+        <article class="card-media">
+          <img src="media/pictures/4e%20film.jpg" alt="Affiche : Kaizen - 1 an pour gravir l'Everest">
+          <div class="card-media-info">
+            <h3 class="card-media-title">Kaizen - 1 an pour gravir l'Everest</h3>
+            <div class="card-media-meta">Docu • 2h40 • Nature</div>
+          </div>
+        </article>
+
+        <article class="card-media">
+          <span class="badge-physique">Nouvel épisode</span>
+          <img src="media/pictures/5e%20film.webp" alt="Affiche : One Piece : EggHead Island">
+          <div class="card-media-info">
+            <h3 class="card-media-title">One Piece : EggHead Island</h3>
+            <div class="card-media-meta">Anime • S14E1023 • Action</div>
+          </div>
+        </article>
+
+        <article class="card-media">
+          <img src="media/pictures/6e%20film.jpg" alt="Affiche : Les Tuche 3 : Liberté, Égalité, Fraternituche">
+          <div class="card-media-info">
+            <h3 class="card-media-title">Les Tuche 3 : Liberté, Égalité, Fraternituche</h3>
+            <div class="card-media-meta">Film • 1h35 • Comédie</div>
+          </div>
+        </article>
+
+        <article class="card-media">
+          <img src="media/pictures/7e%20film.jpg" alt="Affiche : Pearl Harbor">
+          <div class="card-media-info">
+            <h3 class="card-media-title">Pearl Harbor</h3>
+            <div class="card-media-meta">Film • 3h03 • Guerre/Romance</div>
+          </div>
+        </article>
+
+        <article class="card-media">
+          <img src="media/pictures/8e%20film.jpg" alt="Affiche : Un p'tit truc en plus">
+          <div class="card-media-info">
+            <h3 class="card-media-title">Un p'tit truc en plus</h3>
+            <div class="card-media-meta">Film • 1h39 • Comédie</div>
+          </div>
+        </article>
+
+        <article class="card-media">
+          <img src="media/pictures/9e%20film.webp" alt="Affiche : Demon Slayer : La Forteresse Infinie">
+          <div class="card-media-info">
+            <h3 class="card-media-title">Demon Slayer : La Forteresse Infinie</h3>
+            <div class="card-media-meta">Film • 2h36 • Action</div>
+          </div>
+        </article>
+
+        <article class="card-media">
+          <img src="media/pictures/10.webp" alt="Affiche : Rick &amp; Morty">
+          <div class="card-media-info">
+            <h3 class="card-media-title">Rick &amp; Morty</h3>
+            <div class="card-media-meta">Série-Animée • S3E5 • Action/SF</div>
+          </div>
+        </article>
       </div>
-    </article>
+    </section>
 
-    <!--Deuxième Film-->
-    <article class="card-media">
-      <img src="media/pictures/2e film.webp" alt="Film 2">
-      <div class="card-media-info">
-        <div class="card-media-title">Breaking Bad</div>
-        <div class="card-media-meta">Série • S1-E7 • Drame</div>
-      </div>
-    </article>
-
-    <!--Troisième Film-->
-    <article class="card-media">
-      <span class="badge-physique">Dispo en Location</span>
-      <img src="media/pictures/3e film.jpg" alt="Film 3">
-      <div class="card-media-info">
-        <div class="card-media-title">Avenger : Endgame</div>
-        <div class="card-media-meta">Film • 3h01 • Action/SF</div>
-      </div>
-    </article>
-
-    <!--Quatrième Film-->
-    <article class="card-media">
-      <img src="media/pictures/4e film.jpg" alt="Documentaire 4">
-      <div class="card-media-info">
-        <div class="card-media-title">Kaizen - 1 an pour gravir L'Everest</div>
-        <div class="card-media-meta">Docu • 2h40 • Nature</div>
-      </div>
-    </article>
-
-    <!--Cinquième film-->
-    <article class="card-media">
-      <span class="badge-physique">Nouvel épisode</span>
-      <img src="media/pictures/5e film.webp" alt="Anime 5">
-      <div class="card-media-info">
-        <div class="card-media-title">One Piece : EggHead Island</div>
-        <div class="card-media-meta">Anime • S14E1023 • Action</div>
-      </div>
-    </article>
-
-    <!--Sixième film-->
-    <article class="card-media">
-      <img src="media/pictures/6e film.jpg" alt="Film 6">
-      <div class="card-media-info">
-        <div class="card-media-title">Les Tuche 3 : Liberté, Égalité, Fraternituche</div>
-        <div class="card-media-meta">Film • 1h35 • Comédie</div>
-      </div>
-    </article>
-
-    <!--Septième film-->
-    <article class="card-media">
-      <img src="media/pictures/7e film.jpg" alt="Film 7">
-      <div class="card-media-info">
-        <div class="card-media-title">Pearl Harbor</div>
-        <div class="card-media-meta">Film • 3h03 • Guerre/Romance</div>
-      </div>
-    </article>
-
-    <!--Huitième film-->
-    <article class="card-media">
-      <img src="media/pictures/8e film.jpg" alt="Film 8">
-      <div class="card-media-info">
-        <div class="card-media-title">Un p'tit truc en plus</div>
-        <div class="card-media-meta">Film • 1h39 • Comédie</div>
-      </div>
-    </article>
-
-    <!--Neuvième film-->
-    <article class="card-media">
-      <img src="media/pictures/9e film.webp" alt="Anime 9">
-      <div class="card-media-info">
-        <div class="card-media-title">Demon Slayer: La Forteresse Infinie</div>
-        <div class="card-media-meta">Film • 2h36 • Action</div>
-      </div>
-    </article>
-
-    <!--Dixième film-->
-    <article class="card-media">
-      <img src="media/pictures/10.webp" alt="Serie 10">
-      <div class="card-media-info">
-        <div class="card-media-title">Rick & Morty</div>
-        <div class="card-media-meta">Série-Animée • S3E5 • Action/SF</div>
-      </div>
-    </article>
-<!--Carousel Fin-->
-  </div>
-</section>
-<!-- RECHERCHE / FILTRES -->
+    <!-- RECHERCHE / FILTRES -->
     <section>
       <div class="section-header">
         <h2>Rechercher un média</h2>
         <span>Trouvez un titre à streamer ou à commander en physique</span>
       </div>
 
-      <form class="search-bar">
-        <input type="text" placeholder="Titre, acteur, réalisateur..." />
-        <select>
-          <option>Tout type</option>
-          <option>Film</option>
-          <option>Série</option>
-          <option>Anime</option>
-          <option>Documentaire</option>
-          <option>Concert</option>
+      <form class="search-bar" action="#" method="get">
+        <input type="text" name="q" placeholder="Titre, acteur, réalisateur...">
+        <select name="type">
+          <option value="">Tout type</option>
+          <option value="film">Film</option>
+          <option value="serie">Série</option>
+          <option value="anime">Anime</option>
+          <option value="documentaire">Documentaire</option>
+          <option value="concert">Concert</option>
         </select>
-        <select>
-          <option>Streaming & physique</option>
-          <option>Streaming uniquement</option>
-          <option>Physique uniquement</option>
+        <select name="mode">
+          <option value="both">Streaming &amp; physique</option>
+          <option value="streaming">Streaming uniquement</option>
+          <option value="physical">Physique uniquement</option>
         </select>
         <button type="submit" class="btn btn-primary">Rechercher</button>
       </form>
     </section>
-    <div class="select-wrapper">
-  <select>…</select>
-</div>
 
-<!-- SECTION PHYSIQUE -->
-<section id="physique">
+    <!-- SECTION PHYSIQUE -->
+    <section id="physique">
       <div class="section-header">
         <h2>Commander en physique</h2>
         <span>DVD, Blu-ray, Vinyles, Coffrets collectors</span>
       </div>
 
       <div class="physical-grid">
+
         <article class="card-physical">
-          <div class="card-physical-image"
-            style="background-image:url('https://images.pexels.com/photos/5678011/pexels-photo-5678011.jpeg?auto=compress&cs=tinysrgb&w=800');">
-          </div>
+          <span class="badge-stock en-stock">En stock</span>
+          <img class="card-physical-image" src="media/pictures/1e%20coffret.jpg" alt="Harry Potter - L'intégrale des 8 films">
           <div class="card-physical-body">
-            <div class="card-physical-title">L'Ombre de la Ville</div>
-            <div class="card-physical-format">Blu-ray • Édition Steelbook limitée</div>
-            <div class="card-physical-price">24,99 €</div>
+            <h3 class="card-physical-title">Harry Potter - L'intégrale des 8 films</h3>
+            <div class="card-physical-format">Blu-ray • Édition Souvenirs limitée</div>
+            <div class="card-physical-price">35,60 €</div>
             <div class="card-physical-actions">
-              <button class="btn btn-primary">Ajouter au panier</button>
-              <button class="btn btn-ghost">Voir la fiche</button>
-              <span class="badge-stock">En stock</span>
+              <button class="btn btn-primary" type="button">Ajouter au panier</button>
+              <button class="btn btn-ghost" type="button">Voir la fiche</button>
             </div>
           </div>
         </article>
 
         <article class="card-physical">
-          <div class="card-physical-image"
-            style="background-image:url('https://images.pexels.com/photos/2741921/pexels-photo-2741921.jpeg?auto=compress&cs=tinysrgb&w=800');">
-          </div>
+          <span class="badge-stock dernier">Dernier exemplaire</span>
+          <img class="card-physical-image" src="media/pictures/2e%20coffret.jpg" alt="Coffret Game Of Thrones">
           <div class="card-physical-body">
-            <div class="card-physical-title">Nebula 7 – Saison 1</div>
-            <div class="card-physical-format">Coffret DVD • 4 disques</div>
-            <div class="card-physical-price">29,90 €</div>
+            <h3 class="card-physical-title">Coffret Game Of Thrones</h3>
+            <div class="card-physical-format">Blu-ray 4K Ultra HD • Intégrale</div>
+            <div class="card-physical-price">582,67 €</div>
             <div class="card-physical-actions">
-              <button class="btn btn-primary">Ajouter au panier</button>
-              <button class="btn btn-ghost">Voir la fiche</button>
-              <span class="badge-stock">Stock limité</span>
+              <button class="btn btn-primary" type="button">Ajouter au panier</button>
+              <button class="btn btn-ghost" type="button">Voir la fiche</button>
             </div>
           </div>
         </article>
 
         <article class="card-physical">
-          <div class="card-physical-image"
-            style="background-image:url('https://images.pexels.com/photos/164745/pexels-photo-164745.jpeg?auto=compress&cs=tinysrgb&w=800');">
-          </div>
+          <span class="badge-stock en-stock">En stock</span>
+          <img class="card-physical-image" src="media/pictures/3e%20coffret.jpg" alt="Oui-Oui - Le coffret surprise">
           <div class="card-physical-body">
-            <div class="card-physical-title">Live at Midnight</div>
-            <div class="card-physical-format">Double vinyle • Edition Deluxe</div>
-            <div class="card-physical-price">34,50 €</div>
+            <h3 class="card-physical-title">Oui-Oui - Le coffret surprise</h3>
+            <div class="card-physical-format">3 DVD • Édition Surprise Deluxe</div>
+            <div class="card-physical-price">46 €</div>
             <div class="card-physical-actions">
-              <button class="btn btn-primary">Ajouter au panier</button>
-              <button class="btn btn-ghost">Voir la fiche</button>
-              <span class="badge-stock">En stock</span>
+              <button class="btn btn-primary" type="button">Ajouter au panier</button>
+              <button class="btn btn-ghost" type="button">Voir la fiche</button>
             </div>
           </div>
         </article>
 
         <article class="card-physical">
-          <div class="card-physical-image"
-            style="background-image:url('https://images.pexels.com/photos/799143/pexels-photo-799143.jpeg?auto=compress&cs=tinysrgb&w=800');">
-          </div>
+          <span class="badge-stock precommande">Précommande</span>
+          <img class="card-physical-image" src="media/pictures/4ecoffret.jpg" alt="Le Comte de Monte Cristo">
           <div class="card-physical-body">
-            <div class="card-physical-title">Samurai Nova – Part I</div>
-            <div class="card-physical-format">Blu-ray • Version collector + Artbook</div>
-            <div class="card-physical-price">39,99 €</div>
+            <h3 class="card-physical-title">Le Comte de Monte Cristo</h3>
+            <div class="card-physical-format">Blu-ray 4K Ultra HD • Édition Collector</div>
+            <div class="card-physical-price">453,90 €</div>
             <div class="card-physical-actions">
-              <button class="btn btn-primary">Ajouter au panier</button>
-              <button class="btn btn-ghost">Voir la fiche</button>
-              <span class="badge-stock">Précommande</span>
+              <button class="btn btn-primary" type="button">Ajouter au panier</button>
+              <button class="btn btn-ghost" type="button">Voir la fiche</button>
             </div>
           </div>
         </article>
+
       </div>
     </section>
+
+    <!-- Support -->
+    <section id="faq" class="support-cta">
+      <div class="support-cta-card">
+        <h2>Support</h2>
+        <p>Une question ? Besoin d’aide pour votre compte, le streaming ou une commande physique.</p>
+
+        <div class="support-cta-actions">
+          <a class="btn btn-primary" href="support.html">Accéder au support</a>
+          <a class="btn btn-ghost" href="support.html#contact">Nous contacter</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <script>
+    window.addEventListener("scroll", function () {
+      if (window.scrollY > 30) {
+        document.body.classList.add("scrolled");
+      } else {
+        document.body.classList.remove("scrolled");
+      }
+    });
+  </script>
+</body>
 </html>
