@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="styles/desktop.css">
+  <link rel="stylesheet" href="styles/mobile.css">
+
+  <title>CineFlex - Support</title>
+</head>
+
+<body>
+<header>
+  <div class="nav-bar">
+    <div class="logo">CineFlex</div>
+
+    <nav class="nav-links">
+      <a href="index.html">Accueil</a>
+      <a href="index.html#catalogue">Catalogue</a>
+      <a href="page_commande/commande.html">Éditions physiques</a>
+      <a href="support.html" aria-current="page">Support</a>
+    </nav>
+
+    <div class="nav-actions">
+      <button class="btn btn-ghost" type="button">Se connecter</button>
+      <button class="btn btn-primary" type="button">S'inscrire</button>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section class="support-hero">
+    <div class="support-hero-text">
+      <h1>Support CineFlex</h1>
+      <p>
+        Retrouvez les réponses aux questions fréquentes, gérez votre compte et contactez-nous si besoin.
+      </p>
+
+      <form class="support-search" action="#" method="get">
+        <label class="sr-only" for="help-q">Rechercher dans l'aide</label>
+        <input id="help-q" name="q" type="search" placeholder="Rechercher : abonnement, paiement, livraison..." />
+        <button class="btn btn-primary" type="submit">Rechercher</button>
+      </form>
+    </div>
+
+    <div class="support-hero-card">
+      <h2>Besoin d'une réponse rapide ?</h2>
+      <ul>
+        <li>Suivi de livraison des éditions physiques</li>
+        <li>Problème de lecture / qualité vidéo</li>
+        <li>Compte, paiement, abonnement</li>
+      </ul>
+      <a class="btn btn-ghost" href="index.html">Retour à l'accueil</a>
+    </div>
+  </section>
+
+  <section>
+    <div class="section-header">
+      <h2>Raccourcis</h2>
+      <span>Les actions les plus demandées</span>
+    </div>
+
+    <div class="support-grid">
+      <article class="support-card">
+        <h3>Gérer mon abonnement</h3>
+        <p>Modifier, suspendre ou consulter votre offre.</p>
+        <a class="btn btn-primary" href="#faq">Voir les infos</a>
+      </article>
+
+      <article class="support-card">
+        <h3>Livraison &amp; retours</h3>
+        <p>Délais, suivi, retours et remboursements.</p>
+        <a class="btn btn-primary" href="#faq">Voir les infos</a>
+      </article>
+
+      <article class="support-card">
+        <h3>Compte &amp; sécurité</h3>
+        <p>Mot de passe, email, accès et confidentialité.</p>
+        <a class="btn btn-primary" href="#faq">Voir les infos</a>
+      </article>
+
+      <article class="support-card">
+        <h3>Nous contacter</h3>
+        <p>Un souci ? Écrivez-nous et on vous répond vite.</p>
+        <a class="btn btn-primary" href="#contact">Contacter</a>
+      </article>
+    </div>
+  </section>
+
+  <section id="faq">
+    <div class="section-header">
+      <h2>FAQ</h2>
+      <span>Questions fréquentes</span>
+    </div>
+
+    <div class="faq-list">
+      <details>
+        <summary>Comment annuler mon abonnement ?</summary>
+        <p>
+          Vous pouvez annuler à tout moment depuis votre espace compte. L'accès reste actif jusqu'à la fin de la période.
+        </p>
+      </details>
+
+      <details>
+        <summary>Je n'arrive pas à lire une vidéo, que faire ?</summary>
+        <p>
+          Vérifiez votre connexion, puis essayez de relancer la page. Si le souci persiste, changez de navigateur ou de qualité vidéo.
+        </p>
+      </details>
+
+      <details>
+        <summary>Quels sont les délais de livraison pour les coffrets ?</summary>
+        <p>
+          En général 48h à 72h selon disponibilité. Le suivi s’affiche dans votre espace commande.
+        </p>
+      </details>
+
+      <details>
+        <summary>Puis-je retourner un coffret physique ?</summary>
+        <p>
+          Oui, si l'article est retourné en bon état dans le délai indiqué. Les modalités exactes dépendent de la commande.
+        </p>
+      </details>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="section-header">
+      <h2>Contact</h2>
+      <span>On vous répond rapidement</span>
+    </div>
+
+    <div class="contact-grid">
+      <article class="support-card">
+        <h3>Chat</h3>
+        <p>Disponible aux heures ouvrées.</p>
+        <button class="btn btn-primary" type="button">Ouvrir le chat</button>
+      </article>
+
+      <article class="support-card">
+        <h3>Email</h3>
+        <p>Réponse sous 24–48h.</p>
+        <button class="btn btn-primary" type="button">Envoyer un email</button>
+      </article>
+
+      <article class="support-card">
+        <h3>Centre d'aide</h3>
+        <p>Guides &amp; tutoriels.</p>
+        <a class="btn btn-ghost" href="#faq">Voir la FAQ</a>
+      </article>
+    </div>
+  </section>
+</main>
+
+<script>
+  window.addEventListener("scroll", function () {
+    document.body.classList.toggle("scrolled", window.scrollY > 30);
+  });
+</script>
+</body>
+</html>
