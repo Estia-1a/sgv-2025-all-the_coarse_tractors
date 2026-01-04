@@ -827,3 +827,14 @@ main {
   opacity: 1;
 }
 
+.card-physical {
+  position: relative;
+}
+
+.card-physical .badge-stock{
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  z-index: 2;
+}
+
